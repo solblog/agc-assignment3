@@ -1,0 +1,11 @@
+p, button {
+    margin-left:10px;
+}
+
+.setBlue {
+    background-color: blue;
+}
+
+.white{
+    color: white;
+}

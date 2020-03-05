@@ -11,3 +11,35 @@
     </div>
   </div>
 </div>
+<p >1. Add A button which says 'Display Details'</p>
+<button class="btn btn-primary"  (click)="togglePassword()">Display details</button>
+<button class="btn btn-primary"  (click)="updatePoition3to7()">Change 3 by 7</button>
+<!-- <button (click)="displayPassword = !displayPassword">Display details</button> -->
+<hr>
+<p >2. Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')
+   3. Toggle the displaying of that paragraph with the button created in the first step
+</p>
+
+<p *ngIf="displayPassword" >Secret Password = tuna</p>
+
+<hr>
+<!--
+<p *ngFor="let time of listTimebuttonClicked" [ngClass]="setBlue: {(counter > 4) && (counter < 7)}" [ngStyle]="{background-color: getColor()  }" >{{time}}</p>
+-->
+
+
+
+<div style="min-width:300 px; float:left;margin-right:300px" >
+  <p *ngFor="let number of listNumberButtonClicked" 
+    [ngStyle]="{backgroundColor: number > 4 ? 'blue':'transparent'}"
+    [ngClass]="{'white': number > 4}">
+    {{number}}
+  </p>
+</div>
+<div style="min-width:300 px; float:left">
+  <p *ngFor="let time of listTimebuttonClicked" 
+    [ngStyle]="{backgroundColor: counter > 4 ? 'blue':'transparent'}"
+    [ngClass]="{'white': number > 4}">
+    {{counter}}, {{time}}
+  </p>
+</div>
